@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LUCA – CLASSIC License Documentation Portal</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>LUCA – CLASSIC License Portal</h1>
+      <p class="subtitle">
+        Deep-dive documentation and text-grounded interpretation for the LUCA – CLASSIC License (v1.0, February 2026).
+      </p>
+      <p>
+        Start with <a href="./license-analysis.md">license-analysis.md</a>,
+        <a href="./compliance-guide.md">compliance-guide.md</a>, and
+        <a href="./faq.md">faq.md</a> for structured guidance.
+      </p>
+    </header>
+
+    <section class="grid" aria-label="Analysis sections">
+      <article class="card">
+        <h2>License Overview & Philosophy</h2>
+        <p>
+          The license combines expansive usage freedom (including commercial exploitation, modification, redistribution, and sublicensing)
+          with minimal but enforceable continuity conditions focused on notices, pass-through licensing, and non-endorsement.
+        </p>
+      </article>
+      <article class="card">
+        <h2>Permissions, Conditions & Limitations</h2>
+        <p>
+          Core rights are granted in Sections 2 and 3. Conditions in Section 4 prevent downstream restrictions and misleading endorsement,
+          while Sections 6–7 transfer warranty and liability risk away from licensor/contributors.
+        </p>
+      </article>
+      <article class="card">
+        <h2>Legal Implications & Compliance</h2>
+        <p>
+          The agreement is structured around India-centric legal enforceability (law, venue, arbitration mechanics), automatic acceptance by conduct,
+          patent-litigation termination triggers, and survival-oriented severability language.
+        </p>
+      </article>
+      <article class="card">
+        <h2>Usage Guidelines & Best Practices</h2>
+        <p>
+          Distributors should preserve notices, keep license text accessible, avoid extra recipient restrictions, and maintain clear provenance and
+          contribution records for both operational and legal reliability.
+        </p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 16px;">
+      <h2>Full License Text (Scrollable + Copy)</h2>
+      <div class="license-tools">
+        <button id="copyBtn" type="button" aria-label="Copy full LUCA – CLASSIC license text">Copy to Clipboard</button>
+        <span id="copyStatus" class="status" aria-live="polite">Loading license text…</span>
+      </div>
+      <pre id="licenseText" class="license-box" tabindex="0"></pre>
+    </section>
+
+    <footer>
+      <p>
+        Interpretation note: this portal is for documentation and compliance assistance, not legal advice.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    const pre = document.getElementById('licenseText');
+    const btn = document.getElementById('copyBtn');
+    const status = document.getElementById('copyStatus');
+    let licenseText = '';
+
+    async function loadLicense() {
+      try {
+        const response = await fetch('./LUCA-CLASSIC-LICENSE.txt', { cache: 'no-store' });
+        if (!response.ok) throw new Error('License text could not be loaded.');
+        licenseText = await response.text();
+        pre.textContent = licenseText;
+        status.textContent = 'Ready';
+      } catch {
+        status.textContent = 'Failed to load license text.';
+        status.classList.remove('ok');
+      }
+    }
+
+    btn.addEventListener('click', async () => {
+      if (!licenseText) {
+        status.textContent = 'License text unavailable. Try reloading page.';
+        status.classList.remove('ok');
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(licenseText);
+        status.textContent = 'Copied full license text.';
+        status.classList.add('ok');
+      } catch {
+        status.textContent = 'Clipboard unavailable. Select text and copy manually.';
+        status.classList.remove('ok');
+      }
+    });
+
+    loadLicense();
+  </script>
+</body>
+</html>
