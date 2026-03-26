@@ -1,0 +1,120 @@
+HOW TO APPLY THE LUCA – CLASSIC LICENSE
+
+This guide explains how to use the LUCA – CLASSIC License for your own
+work. It is not part of the license itself but is provided for your
+convenience. When in doubt, the terms of the license prevail.
+
+----------------------------------------------------------------------------
+
+1.  APPLYING THE LICENSE TO YOUR WORK
+
+    To release your work under the LUCA – CLASSIC License, follow these
+    steps:
+
+    a) Include a copy of the full license text (the entire document above)
+       in a file named “LICENSE” or “LICENSE.txt” in the root directory of
+       your project.
+
+    b) At the top of the license file, replace “[Anonymous]” with your
+       name or the name of the copyright holder. For example:
+          Copyright (C) 2026 Your Name Here
+
+    c) In every source file that forms part of the work, add a short
+       header notice. A typical header looks like:
+
+          /*
+           * SPDX-License-Identifier: LUCA-CLASSIC-1.0
+           *
+           * This file is part of [Project Name].
+           *
+           * Copyright (C) [year] [copyright holder]
+           *
+           * This work is licensed under the LUCA – CLASSIC License.
+           * See the file LICENSE in the top-level directory of this
+           * distribution for the full license text.
+           */
+
+       For non‑source files (documentation, images, etc.), you may include
+       a similar notice in a comment block or a separate README.
+
+    d) If you distribute your work as a package (e.g., on a website, in a
+       software repository, or as a compiled binary), ensure that the
+       license text is included and easily accessible.
+
+2.  MODIFYING THE LICENSE
+
+    The license allows you to create modified versions, provided you
+    change the name and clearly distinguish it from the original
+    LUCA – CLASSIC License. If you do so:
+
+    a) Change the name at the top (e.g., “MY – CUSTOM LICENSE”).
+    b) Make any changes you wish to the terms.
+    c) Add a statement that your modified version is not the original
+       LUCA – CLASSIC License and is not endorsed by the original author.
+
+    If you only want to change the jurisdiction (city/state) in Section 5.2,
+    you may do so without renaming the license, as that is a permissible
+    customization.
+
+3.  COMPLIANCE WITH CONDITIONS
+
+    Anyone who receives your work under this license must comply with the
+    minimal conditions in Section 4. As the distributor, you are responsible
+    for ensuring that you do not impose additional restrictions on
+    downstream recipients.
+
+    The key obligations are:
+
+    • Retain the copyright notice and a copy of the license.
+    • If you distribute a modified version, include the license (or a link
+      to it) and do not add further restrictions.
+    • Do not use the names of the original authors to endorse your version
+      without permission.
+
+4.  DISCLAIMER OF WARRANTIES
+
+    The work is provided “AS IS”. You must not make any representations
+    that imply the work comes with warranties. If you redistribute the
+    work, you should also pass on the disclaimer of warranties and the
+    limitation of liability.
+
+5.  FREQUENTLY ASKED QUESTIONS
+
+    Q: Do I need to register this license with any organisation?
+    A: No. Under Indian law, the license takes effect automatically when
+       you use the work. No registration with OSI, FSF, or any other body
+       is required.
+
+    Q: Can I use this license for commercial software?
+    A: Yes. You may use, modify, and distribute the work for any purpose,
+       including commercial use, without paying royalties.
+
+    Q: Can I sublicense the work under a different license?
+    A: No. This license requires that any sublicense must include the same
+       terms. You cannot re‑license the work under a different set of terms.
+       However, you may combine it with other works under different licenses,
+       as long as you comply with both.
+
+    Q: What if I only want to use the work without redistributing it?
+    A: No conditions apply. You can use the work internally without
+       providing attribution or the license text.
+
+    Q: I modified the work. How do I indicate that?
+    A: You may add your own copyright notice alongside the original.
+       The original copyright notice must remain intact, but you may add
+       a notice such as “Portions copyright [year] [your name]”.
+
+    Q: The license says “No warranty”. Can I offer my own warranty?
+    A: Yes, but if you do, you are solely responsible for that warranty.
+       The original licensor offers none.
+
+6.  CONTACT
+
+    If you have questions about applying or using this license, you may
+    seek legal advice. The author of this license does not provide legal
+    counsel.
+
+----------------------------------------------------------------------------
+
+Happy creating – and remember: you can do what you want with the work,
+subject only to the simple conditions above.
